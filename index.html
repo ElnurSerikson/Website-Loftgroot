@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0d0b0a" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <title>LOFTGROOT — мангальные комплексы в стиле LOFT в Алматы</title>
+    <meta
+      name="description"
+      content="Проектируем и создаём премиальные мангальные зоны в стиле LOFT в Алматы. Собственное производство, индивидуальный проект, металл и натуральное дерево."
+    />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ru_RU" />
+    <meta property="og:site_name" content="LOFTGROOT" />
+    <meta property="og:title" content="LOFTGROOT — мангальные комплексы, которые становятся частью архитектуры дома" />
+    <meta
+      property="og:description"
+      content="Премиальные мангальные зоны в стиле LOFT. Собственное производство и индивидуальный проект, Алматы."
+    />
+    <meta property="og:image" content="/og.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Первый экран должен быть резким сразу.
+         С фильмом (от 1200×640, CINEMATIC_QUERY в film.ts) это первый кадр:
+         кадры грузятся через fetch (их распаковывают в фоне, см.
+         FilmBackdrop), поэтому и предзагрузка as=fetch с crossorigin.
+         Ниже фильма нет — первым нужен баннер первой секции. -->
+    <link
+      rel="preload"
+      as="fetch"
+      crossorigin="anonymous"
+      href="/film/f_0000.webp"
+      media="(min-width: 1200px) and (min-height: 640px)"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      as="image"
+      imagesrcset="/stills/s_1@sm.webp 640w, /stills/s_1@md.webp 1024w, /stills/s_1@lg.webp 1672w"
+      imagesizes="100vw"
+      media="(max-width: 1199px), (max-height: 639px)"
+      fetchpriority="high"
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "LOFTGROOT",
+        "description": "Мангальные комплексы в стиле LOFT: проектирование и собственное производство в Алматы.",
+        "address": { "@type": "PostalAddress", "addressLocality": "Алматы", "addressCountry": "KZ" },
+        "sameAs": ["https://www.instagram.com/loftgroot/"]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
